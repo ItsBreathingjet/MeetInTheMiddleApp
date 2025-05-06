@@ -48,6 +48,29 @@ MeetInTheMiddle is a web application that helps users find the perfect midpoint 
 
 4. Open your browser and navigate to `http://localhost:5173`
 
+### Architecture
+
+```
+┌─────────────────┐     ┌─────────────────┐     ┌─────────────────┐
+│                 │     │                 │     │                 │
+│  Location Input ├────►│  Map Interface  │◄────┤  POI Panel      │
+│  Component      │     │  Component      │     │  Component      │
+│                 │     │                 │     │                 │
+└─────────────────┘     └────────┬────────┘     └─────────────────┘
+                                 │
+                                 ▼
+                        ┌─────────────────┐
+                        │                 │
+                        │  External APIs  │
+                        │  - Geocoding    │
+                        │  - Routing      │
+                        │  - POI Data     │
+                        │                 │
+                        └─────────────────┘
+```
+
+### Technologies Used
+
 ## Deploying to App Stores
 
 ### Preparing for App Store Deployment
